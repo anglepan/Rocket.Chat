@@ -1316,7 +1316,7 @@
   "Title_bar_color": "标题栏颜色",
   "Title_bar_color_offline": "离线标题栏颜色",
   "Title_offline": "离线标题",
-  "To_install_RocketChat_Livechat_in_your_website_copy_paste_this_code_above_the_last_body_tag_on_your_site": "要在您的网站中安装 Rocket.Chat 在线聊天，请将以下代码复制粘贴到您的网页代码中最后一个 <strong>&lt;/body&gt;</strong> 标签之上。",
+  "To_install_RocketChat_Livechat_in_your_website_copy_paste_this_code_above_the_last_body_tag_on_your_site": "要在您的网站中安装在线聊天，请将以下代码复制粘贴到您的网页代码中最后一个 <strong>&lt;/body&gt;</strong> 标签之上。",
   "to_see_more_details_on_how_to_integrate": "以便查看更多关于集成的细节。",
   "To_users": "给用户",
   "Toggle_original_translated": "切换地区/语言",
