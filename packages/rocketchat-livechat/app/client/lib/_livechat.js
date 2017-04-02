@@ -10,7 +10,7 @@ this.Livechat = new (class Livechat {
 		this._onlineFontColor = new ReactiveVar('#FFFFFF');
 		this._offlineFontColor = new ReactiveVar('#FFFFFF');
 
-		this._title = new ReactiveVar('Rocket.Chat');
+		this._title = new ReactiveVar('在线客服');
 		this._registrationForm = new ReactiveVar(true);
 		this._offlineMessage = new ReactiveVar('');
 		this._offlineUnavailableMessage = new ReactiveVar('');
