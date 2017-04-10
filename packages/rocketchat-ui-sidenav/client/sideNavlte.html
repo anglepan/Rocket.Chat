@@ -1,42 +1,296 @@
 <template name="sideNavlte">
-	<aside class="side-nav primary-background-color color-tertiary-font-color" role="navigation">
-		<header class="header">
-			{{> accountBox }}
-		</header>
-		{{#if currentUser}}
-			{{> toolbar}}
-			<div class="unread-rooms background-primary-action-color color-primary-action-contrast top-unread-rooms hidden">
-				{{_ "More_unreads"}} <i class="icon-up-big"></i>
-			</div>
-			<div class="rooms-list" aria-label="{{_ "Channels"}}" role="region">
-				<div class="wrapper">
-					{{> unreadRooms }}
+<aside class="main-sidebar control-sidebar-dark">
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <p>Alexander Pierce</p>
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search...">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+        <!-- /.search form -->
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- message tab content -->
+            <div class="tab-pane" id="sidebar-message-tab">
+                <ul class="sidebar-menu">
+                    <!--<li class="header">MAIN NAVIGATION</li>-->
+                    <li class="active treeview">
+                        <a href="#">
+                            <div class="user-panel2">
+                                <div class="pull-left image">
+                                    <img src="http://tva1.sinaimg.cn/crop.0.0.180.180.180/86b15b6cjw1e8qgp5bmzyj2050050aa8.jpg" class="img-circle" alt="User Image">
+                                </div>
+                                <div class="pull-left info">
+                                    <span>长泽梓Azusa</span>
+                                    <p><i class="fa fa-circle text-success"></i>Online</p>
+                                </div>
+                            </div>
 
-					{{#each roomType}}
-						{{#if canShowRoomType}}
-							{{> Template.dynamic template=templateName }}
-						{{/if}}
-					{{/each}}
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <div class="user-panel2">
+                                <div class="pull-left image">
+                                    <img src="http://tp4.sinaimg.cn/1345566427/180/5730976522/0" class="img-circle" alt="User Image">
+                                </div>
+                                <div class="pull-left info">
+                                    <span>佟丽娅</span>
+                                    <p><i class="fa fa-circle text-success"></i>Online</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
 
-					{{#if canViewHistory}}
-						<h3 class="history-div">
-							<a href="{{pathFor 'privateHistory'}}">{{_ "History"}}</a>
-						</h3>
-					{{/if}}
-				</div>
-			</div>
-			<div class="unread-rooms background-primary-action-color color-primary-action-contrast bottom-unread-rooms hidden">
-				{{_ "More_unreads"}} <i class="icon-down-big"></i>
-			</div>
-			<div class="flex-nav primary-background-color animated-hidden">
-				<section>
-					{{> Template.dynamic template=flexTemplate data=flexData}}
-				</section>
-			</div>
-			<span class="arrow bottom"></span>
-		{{/if}}
-		<!--<footer class="footer">
-			{{{footer}}}
-		</footer>-->
-	</aside>
+
+                </ul>
+
+                <!-- /.sidebar -->
+            </div>
+            <!-- /.tab-pane -->
+            <!-- friend tab content -->
+            <div class="tab-pane active" id="sidebar-friend-tab">
+
+                <ul class="sidebar-menu">
+                    <li class="active treeview">
+                        <a href="#">
+                            <span class="pull-left-container">
+                                <i class="fa fa-angle-right"></i>在线客服<em>(2)</em>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="index2.html">
+                                    <div class="user-panel2">
+                                        <div class="pull-left image">
+                                            <img src="http://tva1.sinaimg.cn/crop.0.0.180.180.180/86b15b6cjw1e8qgp5bmzyj2050050aa8.jpg" class="img-circle" alt="User Image">
+                                        </div>
+                                        <div class="pull-left info">
+                                            <span>长泽梓Azusa</span>
+                                            <p><i class="fa fa-circle text-success"></i>Online</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index2.html">
+                                    <div class="user-panel2">
+                                        <div class="pull-left image">
+                                            <img src="http://tp4.sinaimg.cn/1345566427/180/5730976522/0" class="img-circle" alt="User Image">
+                                        </div>
+                                        <div class="pull-left info">
+                                            <span>佟丽娅</span>
+                                            <p><i class="fa fa-circle text-success"></i>Online</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <span class="pull-left-container">
+                                <i class="fa fa-angle-right"></i>公开群<em>(4)</em>
+                            </span>
+
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="index2.html">
+                                    <div class="user-panel2">
+                                        <div class="pull-left image">
+                                            <img src="http://tva1.sinaimg.cn/crop.0.0.180.180.180/86b15b6cjw1e8qgp5bmzyj2050050aa8.jpg" class="img-circle" alt="User Image">
+                                        </div>
+                                        <div class="pull-left info">
+                                            <span>长泽梓Azusa</span>
+                                            <p><i class="fa fa-circle text-success"></i>Online</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index2.html">
+                                    <div class="user-panel2">
+                                        <div class="pull-left image">
+                                            <img src="http://tp4.sinaimg.cn/1345566427/180/5730976522/0" class="img-circle" alt="User Image">
+                                        </div>
+                                        <div class="pull-left info">
+                                            <span>佟丽娅</span>
+                                            <p><i class="fa fa-circle text-success"></i>Online</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index2.html">
+                                    <div class="user-panel2">
+                                        <div class="pull-left image">
+                                            <img src="http://tva1.sinaimg.cn/crop.0.0.180.180.180/86b15b6cjw1e8qgp5bmzyj2050050aa8.jpg" class="img-circle" alt="User Image">
+                                        </div>
+                                        <div class="pull-left info">
+                                            <span>长泽梓Azusa</span>
+                                            <p><i class="fa fa-circle text-success"></i>Online</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index2.html">
+                                    <div class="user-panel2">
+                                        <div class="pull-left image">
+                                            <img src="http://tp4.sinaimg.cn/1345566427/180/5730976522/0" class="img-circle" alt="User Image">
+                                        </div>
+                                        <div class="pull-left info">
+                                            <span>佟丽娅</span>
+                                            <p><i class="fa fa-circle text-success"></i>Online</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index2.html">
+                                    <div class="user-panel2">
+                                        <div class="pull-left image">
+                                            <img src="http://tva1.sinaimg.cn/crop.0.0.180.180.180/86b15b6cjw1e8qgp5bmzyj2050050aa8.jpg" class="img-circle" alt="User Image">
+                                        </div>
+                                        <div class="pull-left info">
+                                            <span>长泽梓Azusa</span>
+                                            <p><i class="fa fa-circle text-success"></i>Online</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index2.html">
+                                    <div class="user-panel2">
+                                        <div class="pull-left image">
+                                            <img src="http://tp4.sinaimg.cn/1345566427/180/5730976522/0" class="img-circle" alt="User Image">
+                                        </div>
+                                        <div class="pull-left info">
+                                            <span>佟丽娅</span>
+                                            <p><i class="fa fa-circle text-success"></i>Online</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index2.html">
+                                    <div class="user-panel2">
+                                        <div class="pull-left image">
+                                            <img src="http://tva1.sinaimg.cn/crop.0.0.180.180.180/86b15b6cjw1e8qgp5bmzyj2050050aa8.jpg" class="img-circle" alt="User Image">
+                                        </div>
+                                        <div class="pull-left info">
+                                            <span>长泽梓Azusa</span>
+                                            <p><i class="fa fa-circle text-success"></i>Online</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index2.html">
+                                    <div class="user-panel2">
+                                        <div class="pull-left image">
+                                            <img src="http://tp4.sinaimg.cn/1345566427/180/5730976522/0" class="img-circle" alt="User Image">
+                                        </div>
+                                        <div class="pull-left info">
+                                            <span>佟丽娅</span>
+                                            <p><i class="fa fa-circle text-success"></i>Online</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index2.html">
+                                    <div class="user-panel2">
+                                        <div class="pull-left image">
+                                            <img src="http://tva1.sinaimg.cn/crop.0.0.180.180.180/86b15b6cjw1e8qgp5bmzyj2050050aa8.jpg" class="img-circle" alt="User Image">
+                                        </div>
+                                        <div class="pull-left info">
+                                            <span>长泽梓Azusa</span>
+                                            <p><i class="fa fa-circle text-success"></i>Online</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index2.html">
+                                    <div class="user-panel2">
+                                        <div class="pull-left image">
+                                            <img src="http://tp4.sinaimg.cn/1345566427/180/5730976522/0" class="img-circle" alt="User Image">
+                                        </div>
+                                        <div class="pull-left info">
+                                            <span>佟丽娅</span>
+                                            <p><i class="fa fa-circle text-success"></i>Online</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="#">
+                            <span class="pull-left-container">
+                                <i class="fa fa-angle-right"></i>私信<em>(4)</em>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+                            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
+                            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
+                            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <span class="pull-left-container">
+                                <i class="fa fa-angle-right"></i>私有群<em>(6)</em>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
+                            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
+                            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
+                            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
+                            <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
+                            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!-- /.sidebar -->
+            </div>
+            <!-- /.tab-pane -->
+            <!-- group tab content -->
+            <div class="tab-pane" id="sidebar-group-tab">
+                <h1>
+                    group
+                    <small>Version 2.0</small>
+                </h1>
+            </div>
+            <!-- /.tab-pane -->
+        </div>
+
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs" style="position:absolute;bottom:0px;">
+            <li><a href="#sidebar-message-tab" data-toggle="tab"><i class="fa fa-commenting fa-lg"></i></a></li>
+            <li class="active"><a href="#sidebar-friend-tab" data-toggle="tab"><i class="fa fa-user fa-lg"></i></a></li>
+            <li><a href="#sidebar-group-tab" data-toggle="tab"><i class="fa fa-users fa-lg"></i></a></li>
+        </ul>
+    </section>
+</aside>
 </template>

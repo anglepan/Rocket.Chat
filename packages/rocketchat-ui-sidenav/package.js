@@ -52,4 +52,7 @@ Package.onUse(function(api) {
 	api.addFiles('client/starredRooms.coffee', 'client');
 	api.addFiles('client/toolbar.js', 'client');
 	api.addFiles('client/unreadRooms.coffee', 'client');
+
+	//adminlte
+	api.addFiles('client/sideNav.coffee', 'client');
 });
