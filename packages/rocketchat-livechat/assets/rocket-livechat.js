@@ -567,7 +567,7 @@
 		},
 		openPopout: function() {
 			closeWidget();
-			var popup = window.open(config.url + '?mode=popout', 'livechat-popout', 'width=400, height=450, toolbars=no');
+			var popup = window.open(config.url + '?mode=popout', 'livechat-popout', 'width=400, height=450, toolbars=no, location=no');
 			popup.focus();
 		},
 		openWidget: function() {
