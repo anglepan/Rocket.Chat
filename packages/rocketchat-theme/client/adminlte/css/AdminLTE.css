@@ -889,6 +889,8 @@ a:focus {
   border-bottom: #1c2529;
 }
 .control-sidebar-dark .nav-tabs.control-sidebar-tabs > li > a {
+  margin-bottom: 0px;
+  border-radius: 0px;
   background: #181f23;
   color: #b8c7ce;
 }
