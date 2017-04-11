@@ -21,18 +21,6 @@ Package.onUse(function(api) {
 	api.addFiles('server/server.coffee', 'server');
 	api.addFiles('server/variables.coffee', 'server');
 
-	//Bootstrap
-	//api.addFiles('client/bootstrap/css/bootstrap.css', 'client');
-	//api.addFiles('client/bootstrap/js/bootstrap.js', 'client');
-
-	//Font Awesome
-	//api.addFiles('client/fontawesome/css/font-awesome.css', 'client');
-	//api.addAssets('client/fontawesome/fronts/glyphicons-halflings-regular.eot', 'client');
-	//api.addAssets('client/fontawesome/fronts/glyphicons-halflings-regular.svg', 'client');
-	//api.addAssets('client/fontawesome/fronts/glyphicons-halflings-regular.ttf', 'client');
-	//api.addAssets('client/fontawesome/fronts/glyphicons-halflings-regular.woff', 'client');
-	//api.addAssets('client/fontawesome/fronts/glyphicons-halflings-regular.woff2', 'client');
-
 	// Colorpicker
 	api.addFiles('client/vendor/jscolor.js', 'client');
 
@@ -52,14 +40,14 @@ Package.onUse(function(api) {
 
 	//fastclick
 	//api.addFiles('client/vendor/fastclick/fastclick.js', 'client');
+	//slimscroll
+	//api.addFiles('client/vendor/slimScroll/jquery.slimscroll.js', 'client');
 
 	//Adminlte
 	api.addFiles('client/adminlte/css/AdminLTE.css', 'client');
 	api.addFiles('client/adminlte/css/skins/skin-blue.css', 'client');
 	api.addFiles('client/adminlte/js/app.js', 'client');
 
-	//slimscroll
-	//api.addFiles('client/vendor/slimScroll/jquery.slimscroll.js', 'client');
 
 	// Run-time stylesheets
 	api.addAssets('server/lesshat.less', 'server');

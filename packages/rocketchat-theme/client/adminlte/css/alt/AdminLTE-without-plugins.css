@@ -25,21 +25,21 @@ body {
   overflow-y: auto;
 }
 /* Layout */
-.ltewrapper {
+.wrapper {
   height: 100%;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
 }
-.ltewrapper:before,
-.ltewrapper:after {
+.wrapper:before,
+.wrapper:after {
   content: " ";
   display: table;
 }
-.ltewrapper:after {
+.wrapper:after {
   clear: both;
 }
-.layout-boxed .ltewrapper {
+.layout-boxed .wrapper {
   max-width: 1250px;
   margin: 0 auto;
   min-height: 100%;
