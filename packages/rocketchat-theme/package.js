@@ -41,7 +41,7 @@ Package.onUse(function(api) {
 	//fastclick
 	//api.addFiles('client/vendor/fastclick/fastclick.js', 'client');
 	//slimscroll
-	//api.addFiles('client/vendor/slimScroll/jquery.slimscroll.js', 'client');
+	api.addFiles('client/vendor/slimScroll/jquery.slimscroll.js', 'client');
 
 	//Adminlte
 	api.addFiles('client/adminlte/css/AdminLTE.css', 'client');
