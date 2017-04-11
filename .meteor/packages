@@ -167,4 +167,10 @@ todda00:friendly-slugs
 underscorestring:underscore.string
 yasaricli:slugify
 yasinuslu:blaze-meta
+
+twbs:bootstrap
 deepwell:bootstrap-datepicker2
+
+fortawesome:fontawesome
+rochal:slimscroll
+

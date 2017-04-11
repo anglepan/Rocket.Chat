@@ -73,7 +73,7 @@
     "codemirror": "^5.24.2",
     "file-type": "^4.1.0",
     "highlight.js": "^9.9.0",
-    "jquery": "^3.1.1",
+    "jquery": "^2.2.4",
     "mime-db": "^1.26.0",
     "mime-type": "^3.0.4",
     "moment": "^2.17.1",
