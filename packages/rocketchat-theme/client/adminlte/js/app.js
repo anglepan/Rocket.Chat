@@ -296,7 +296,9 @@ function _init() {
       }
       //Enable slimscroll for fixed layout
       if ($.AdminLTE.options.sidebarSlimScroll) {
-        if (typeof $.fn.slimScroll != 'undefined') {
+          
+          if (typeof $.fn.slimScroll != 'undefined') {
+              console.log("fixSidebar do");
           //Destroy if it exists
           $(".sidebar").slimScroll({destroy: true}).height("auto");
           //Add slimscroll
