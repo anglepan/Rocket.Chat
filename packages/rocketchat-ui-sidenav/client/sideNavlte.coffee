@@ -58,30 +58,5 @@ Template.sideNavlte.onRendered ->
 	SideNav.init()
 	menu.init()
 
-	//Make sure the body tag has the .fixed class
-    if (!$("body").hasClass("fixed")) {
-        if (typeof $.fn.slimScroll != 'undefined') {
-            $(".sidebar").slimScroll({ destroy: true }).height("auto");
-        }
-        return;
-    } else if (typeof $.fn.slimScroll == 'undefined' && window.console) {
-        window.console.error("Error: the fixed layout requires the slimscroll plugin!");
-    }
-    //Enable slimscroll for fixed layout
-    if ($.AdminLTE.options.sidebarSlimScroll) {
-
-        if (typeof $.fn.slimScroll != 'undefined') {
-            console.log("fixSidebar2 do");
-            //Destroy if it exists
-            $(".sidebar").slimScroll({ destroy: true }).height("auto");
-            //Add slimscroll
-            $(".sidebar").slimScroll({
-                height: ($(window).height() - $(".sidebar-header").height()) + "px",
-                color: "rgba(0,0,0,0.2)",
-                size: "3px"
-            });
-        }
-    }
-
 	Meteor.defer ->
 		menu.updateUnreadBars()
