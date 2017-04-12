@@ -44,9 +44,9 @@ Package.onUse(function(api) {
 	api.addFiles('client/vendor/slimScroll/jquery.slimscroll.js', 'client');
 
 	//Adminlte
-	api.addFiles('client/adminlte/css/AdminLTE.css', 'client');
+	api.addFiles('client/adminlte/css/LTE.css', 'client');
 	api.addFiles('client/adminlte/css/skins/skin-blue.css', 'client');
-	api.addFiles('client/adminlte/js/app.js', 'client');
+	api.addFiles('client/adminlte/js/LTE.js', 'client');
 
 
 	// Run-time stylesheets
