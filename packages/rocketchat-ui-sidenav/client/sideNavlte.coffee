@@ -63,6 +63,8 @@ Template.sideNavlte.onRendered ->
 	  $('body').addClass 'fixed'
 	  #Enable slimscroll for fixed layout
 	  if $.AdminLTE.options.sidebarSlimScroll
+	  	if typeof $.fn.slimScroll == 'undefined' and window.console
+  			window.console.error 'Error: the fixed layout requires the slimscroll plugin!'
 	    if typeof $.fn.slimScroll != 'undefined'
 	      console.log 'fixSidebar2 do'
 	      #Destroy if it exists
