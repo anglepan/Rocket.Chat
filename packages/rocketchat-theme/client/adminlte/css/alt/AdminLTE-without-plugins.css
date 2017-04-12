@@ -541,6 +541,7 @@ a:focus {
 .sidebar-menu > li > a {
   padding: 12px 5px 12px 15px;
   display: block;
+  text-decoration: none;
 }
 .sidebar-menu > li > a > .fa,
 .sidebar-menu > li > a > .glyphicon,

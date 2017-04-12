@@ -76,3 +76,5 @@ build.sh
 /public/livechat
 AdminLTE.css
 AdminLTE.min.css
+app.js
+app.min.js
