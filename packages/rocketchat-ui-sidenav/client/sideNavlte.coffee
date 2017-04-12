@@ -72,6 +72,8 @@ Template.sideNavlte.onRendered ->
 	        height: $(window).height() - $('.sidebar-header').height() + 'px'
 	        color: 'rgba(0,0,0,0.2)'
 	        size: '3px'
+	      console.log $(window).height()
+	      console.log $('.sidebar-header').height()
   
 	Meteor.defer ->
 		menu.updateUnreadBars()
