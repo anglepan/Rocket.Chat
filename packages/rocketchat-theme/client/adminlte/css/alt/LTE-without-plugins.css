@@ -451,6 +451,9 @@ a:focus {
     }
   }*/
 }
+.sidebar-header {
+  height: 120px;
+}
 .sidebar {
   padding-bottom: 10px;
 }
