@@ -76,6 +76,8 @@ Template.sideNavlte.onRendered ->
 	        size: '3px'
 	      console.log $(window).height()
 	      console.log $('.sidebar-header').height()
+	      console.log $('.user-panel').height()
+	      console.log $('.sidebar-form').height()
   
 	Meteor.defer ->
 		menu.updateUnreadBars()
