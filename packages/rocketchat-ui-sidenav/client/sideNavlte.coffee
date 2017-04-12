@@ -58,16 +58,9 @@ Template.sideNavlte.onRendered ->
 	SideNav.init()
 	menu.init()
 
-	if $.AdminLTE.options.sidebarSlimScroll
-	  if typeof $.fn.slimScroll != 'undefined'
-	    console.log 'fixSidebar2 do'
-	    #Destroy if it exists
-	    $('.sidebar').slimScroll(destroy: true).height 'auto'
-	    #Add slimscroll
-	    $('.sidebar').slimScroll
-	      height: $(window).height() - $('.sidebar-header').height() + 'px'
-	      color: 'rgba(0,0,0,0.2)'
-	      size: '3px'
-      
+	#Make sure the body tag has the .fixed class
+	if !$('body').hasClass('fixed')
+	  $('body').addClass 'fixed'
+  
 	Meteor.defer ->
 		menu.updateUnreadBars()
