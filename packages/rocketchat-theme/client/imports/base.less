@@ -1004,7 +1004,7 @@ label.required::after {
 
 .account-box {
 	position: relative;
-	//height: 100%;
+	height: @header-min-height;
 	cursor: pointer;
 	width: 100%;
 
@@ -1017,9 +1017,9 @@ label.required::after {
 		.thumb {
 			float: left;
 			position: relative;
-			width: 42px;
+			width: 45px;
 			padding: 0;
-			height: 42px;
+			height: 45px;
 
 			&::after {
 				content: " ";
@@ -1039,14 +1039,19 @@ label.required::after {
 		}
 
 		.data {
-			float: left;
-			position: relative;
-			padding: 0 25px 0 10px;
-			height: 100%;
-			.flex-center;
-			flex-flow: row nowrap;
-			.calc(width, ~"100% - 60px");
+	        padding: 0px 5px 5px 15px;
+	        line-height: 1;
+	        position: absolute;
+	        left: 55px;
+			//float: left;
+			//position: relative;
+			//padding: 0 25px 0 10px;
+			//height: 100%;
+			//.flex-center;
+			//flex-flow: row nowrap;
+			//.calc(width, ~"100% - 60px");
 		}
+
 
 		h4 {
 			display: block;
