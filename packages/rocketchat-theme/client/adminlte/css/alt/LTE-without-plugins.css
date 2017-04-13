@@ -2793,11 +2793,8 @@ table.text-center th {
   height: 250px;
   overflow: auto;
 }
-.direct-chat-msg,
-.direct-chat-text {
-  display: block;
-}
 .direct-chat-msg {
+  display: block;
   margin-bottom: 10px;
 }
 .direct-chat-msg:before,
@@ -2808,6 +2805,9 @@ table.text-center th {
 .direct-chat-msg:after {
   clear: both;
 }
+/*.direct-chat-text {
+    display: inline-block;
+}*/
 .direct-chat-messages,
 .direct-chat-contacts {
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
@@ -2821,8 +2821,10 @@ table.text-center th {
   padding: 5px 10px;
   background: #d2d6de;
   border: 1px solid #d2d6de;
-  margin: 5px 0 0 50px;
+  margin: 5px 40px 0 55px;
   color: #444444;
+  display: inline-block;
+  vertical-align: top;
 }
 .direct-chat-text:after,
 .direct-chat-text:before {
@@ -2845,8 +2847,10 @@ table.text-center th {
   margin-top: -6px;
 }
 .right .direct-chat-text {
-  margin-right: 50px;
-  margin-left: 0;
+  margin-left: 0px;
+  margin-right: 0px;
+  float: right;
+  right: 55px;
 }
 .right .direct-chat-text:after,
 .right .direct-chat-text:before {
@@ -2855,22 +2859,38 @@ table.text-center th {
   border-right-color: transparent;
   border-left-color: #d2d6de;
 }
-.direct-chat-img {
-  border-radius: 50%;
-  float: left;
-  width: 40px;
-  height: 40px;
-}
-.right .direct-chat-img {
-  float: right;
+.group .direct-chat-text {
+  margin-top: 20px;
 }
 .direct-chat-info {
-  display: block;
-  margin-bottom: 2px;
-  font-size: 12px;
+  position: absolute;
+  left: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+.right .direct-chat-info {
+  left: auto;
+  right: 10px;
+}
+.direct-chat-img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  /*.right & {
+    float: right;
+  }*/
 }
 .direct-chat-name {
-  font-weight: 600;
+  position: absolute;
+  left: 56px;
+  top: -5px;
+  width: 200px;
+  line-height: 24px;
+}
+.right .direct-chat-name {
+  left: auto;
+  right: 56px;
+  text-align: right;
 }
 .direct-chat-timestamp {
   color: #999;
