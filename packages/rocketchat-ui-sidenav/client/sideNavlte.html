@@ -1,7 +1,10 @@
 <template name="sideNavLte">
 <aside class="side-nav main-sidebar control-sidebar-dark" role="navigation">
     <div class="sidebar-header">
-        {{> accountBoxLte }}           
+        {{> accountBoxLte }}  
+        {{#if currentUser}}
+            {{> toolbar}}    
+        {{/if}}     
         <!-- search form -->
         <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
@@ -13,7 +16,7 @@
                 </span>
             </div>
         </form>  
-    </div>
+    </div>    
     <section class="sidebar">
         <!-- /.search form -->
         <!-- Tab panes -->
@@ -284,5 +287,14 @@
             <li><a href="#sidebar-group-tab" data-toggle="tab"><i class="fa fa-users fa-lg"></i></a></li>
         </ul>
     </section>
+    <div class="unread-rooms background-primary-action-color color-primary-action-contrast bottom-unread-rooms hidden">
+        {{_ "More_unreads"}} <i class="icon-down-big"></i>
+    </div>
+    <div class="flex-nav primary-background-color animated-hidden">
+        <section>
+            {{> Template.dynamic template=flexTemplate data=flexData}}
+        </section>
+    </div>
+    <span class="arrow bottom"></span>
 </aside>
 </template>
