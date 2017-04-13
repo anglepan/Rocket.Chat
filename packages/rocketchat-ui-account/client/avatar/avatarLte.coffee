@@ -11,4 +11,4 @@ Template.avatarLte.helpers
 
 		url = getAvatarUrlFromUsername(username)
 
-		return url
+		return "background-image:url(#{url});"
