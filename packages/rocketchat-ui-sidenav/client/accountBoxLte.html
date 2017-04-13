@@ -1,16 +1,18 @@
-<template name="accountBox">
+<template name="accountBoxLte">
 	<div class="account-box" aria-label="{{_ "Account"}}" role="region">
 		{{#with myUserInfo}}
-			<div class="info status-{{status}} primary-background-color">
-				{{#if username}}
-					<div class="thumb" data-status='{{visualStatus}}'>
-						{{> avatar username=username}}
-					</div>
-					<div class="data">
-						<h4>{{username}}</h4>
-					</div>
+		   <!-- Sidebar user panel -->
+		    <div class="user-panel status-{{status}}">
+				{{#if username}}				
+			        <div class="pull-left image" data-status='{{visualStatus}}'>
+						{{> avatarLte username=username}}
+			        </div>
+			        <div class="pull-left info">
+			            <p>{{username}}</p>
+			            <i class="fa fa-circle text-success"></i> Online
+			        </div>
 				{{/if}}
-			</div>
+		    </div>
 			<nav class="options primary-background-color animated-hidden">
 				<div class="wrapper">
 					<button data-status="online" class="status online"><span>{{_ "Online"}}</span></button>

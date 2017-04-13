@@ -1,4 +1,4 @@
-Template.accountBox.helpers
+Template.accountBoxLte.helpers
 	myUserInfo: ->
 		visualStatus = "online"
 		username = Meteor.user()?.username
@@ -23,7 +23,7 @@ Template.accountBox.helpers
 	registeredMenus: ->
 		return AccountBox.getItems()
 
-Template.accountBox.events
+Template.accountBoxLte.events
 	'click .options .status': (event) ->
 		event.preventDefault()
 		AccountBox.setStatus(event.currentTarget.dataset.status)
@@ -66,5 +66,5 @@ Template.accountBox.events
 			SideNav.setFlex @sideNav
 			SideNav.openFlex()
 
-Template.accountBox.onRendered ->
+Template.accountBoxLte.onRendered ->
 	AccountBox.init()

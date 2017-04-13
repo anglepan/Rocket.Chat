@@ -1,4 +1,4 @@
-Template.sideNavlte.helpers
+Template.sideNavLte.helpers
 	flexTemplate: ->
 		return SideNav.getFlex().template
 
@@ -35,7 +35,7 @@ Template.sideNavlte.helpers
 		else
 			return @template
 
-Template.sideNavlte.events
+Template.sideNavLte.events
 	'click .close-flex': ->
 		SideNav.closeFlex()
 
@@ -54,7 +54,7 @@ Template.sideNavlte.events
 	'dropped .side-nav': (e) ->
 		e.preventDefault()
 
-Template.sideNavlte.onRendered ->
+Template.sideNavLte.onRendered ->
 	SideNav.init()
 	menu.init()
 

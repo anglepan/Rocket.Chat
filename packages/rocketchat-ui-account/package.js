@@ -35,4 +35,8 @@ Package.onUse(function(api) {
 	api.addFiles('client/avatar/prompt.coffee', 'client');
 
 	// api.addAssets('styles/side-nav.less', 'client');
+
+	//adminlte	
+	api.addFiles('client/avatar/avatarLte.html', 'client');
+	api.addFiles('client/avatar/avatarLte.coffee', 'client');
 });

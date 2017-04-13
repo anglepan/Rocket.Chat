@@ -54,6 +54,9 @@ Package.onUse(function(api) {
 	api.addFiles('client/unreadRooms.coffee', 'client');
 
 	//adminlte
-	api.addFiles('client/sideNavlte.html', 'client');
-	api.addFiles('client/sideNavlte.coffee', 'client');
+	api.addFiles('client/accountBoxLte.html', 'client');
+	api.addFiles('client/accountBoxLte.coffee', 'client');
+	
+	api.addFiles('client/sideNavLte.html', 'client');
+	api.addFiles('client/sideNavLte.coffee', 'client');
 });
