@@ -30,17 +30,19 @@
 
                 <div class="pull-left info">                    
 					<span class='name {{archived}}'>{{name}}</span>
-                    <p><i class="fa fa-circle text-success"></i>Online</p>
+                    <p>
+	                    <i class="fa fa-circle text-success"></i>
+			            {{#if $not unread}}
+							<span class='opt'>
+								<i class="icon-eye-off hide-room" title="{{_ "Hide_room"}}" aria-label="{{_ "Hide_room"}}"></i>
+								{{#if canLeave}}
+									<i class="icon-logout leave-room" title="{{_ "Leave_room"}}" aria-label="{{_ "Leave_room"}}"></i>
+								{{/if}}
+							</span>
+						{{/if}}
+					</p>
                 </div>
             </div>
-            {{#if $not unread}}
-				<span class='opt'>
-					<i class="icon-eye-off hide-room" title="{{_ "Hide_room"}}" aria-label="{{_ "Hide_room"}}"></i>
-					{{#if canLeave}}
-						<i class="icon-logout leave-room" title="{{_ "Leave_room"}}" aria-label="{{_ "Leave_room"}}"></i>
-					{{/if}}
-				</span>
-			{{/if}}
         </a>
     </li>        
 </template>
