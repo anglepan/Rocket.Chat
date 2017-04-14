@@ -5,17 +5,6 @@
         {{#if currentUser}}
             {{> toolbar}}    
         {{/if}}     
-        <!-- search form -->
-        <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="Search...">
-                <span class="input-group-btn">
-                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </span>
-            </div>
-        </form>
     </div> 
     <div class="unread-rooms background-primary-action-color color-primary-action-contrast top-unread-rooms hidden">
         {{_ "More_unreads"}} <i class="icon-up-big"></i>
@@ -39,7 +28,6 @@
                             </li>
                         {{/each}}
                     </ul>
-
                     {{#if canViewHistory}}
                         <h3 class="history-div">
                             <a href="{{pathFor 'privateHistory'}}">{{_ "History"}}</a>
@@ -55,7 +43,6 @@
                 </div>
                 <!-- /.tab-pane -->
             </div>
-
             <ul class="nav nav-tabs nav-justified control-sidebar-tabs" style="position:absolute;bottom:0px;">
                 <li><a href="#sidebar-message-tab" data-toggle="tab"><i class="fa fa-commenting fa-lg"></i></a></li>
                 <li class="active"><a href="#sidebar-friend-tab" data-toggle="tab"><i class="fa fa-user fa-lg"></i></a></li>
@@ -63,7 +50,6 @@
             </ul>
         </section>
     {{/if}}
-
     <div class="unread-rooms background-primary-action-color color-primary-action-contrast bottom-unread-rooms hidden">
         {{_ "More_unreads"}} <i class="icon-down-big"></i>
     </div>
