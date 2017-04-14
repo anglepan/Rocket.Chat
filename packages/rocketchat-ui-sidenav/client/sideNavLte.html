@@ -64,11 +64,15 @@
                 <!-- /.tab-pane -->
                 <!-- friend tab content -->
                 <div class="tab-pane rooms-list active" id="sidebar-friend-tab" aria-label="{{_ "Channels"}}" role="region">
-                    {{#each roomType}}
-                        {{#if canShowRoomType}}
-                            {{> Template.dynamic template=templateName }}
-                        {{/if}}
-                    {{/each}}
+                    <ul class="sidebar-menu">
+                        {{#each roomType}}
+                            <li class="treeview active">
+                                {{#if canShowRoomType}}
+                                    {{> Template.dynamic template=templateName }}
+                                {{/if}}
+                            </li>
+                        {{/each}}
+                    </ul>
 
                     {{#if canViewHistory}}
                         <h3 class="history-div">
@@ -77,7 +81,7 @@
                     {{/if}}
                     <!--
                     <ul class="sidebar-menu">
-                        <li class="active treeview">
+                        <li class="treeview active">
                             <a href="#">
                                 <span class="pull-left-container">
                                     <i class="fa fa-angle-right"></i>在线客服<em>(2)</em>

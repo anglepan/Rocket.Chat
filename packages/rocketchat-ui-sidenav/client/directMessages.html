@@ -1,4 +1,5 @@
 <template name="directMessages">
+	<!--
 	<h3 class="add-room {{isActive}}">
 		{{_ "Direct_Messages"}} <span class="room-count-small">({{rooms.count}})</span>
 	</h3>
@@ -9,4 +10,17 @@
 			<p class="empty">{{_ "No_direct_messages_yet" }}</p>
 		{{/each}}
 	</ul>
+	-->
+	<a href="#">
+        <span class="pull-left-container {{isActive}}">
+            <i class="fa fa-angle-right"></i>{{_ "Direct_Messages"}}<em>({{rooms.count}})</em>
+        </span>
+    </a>
+    <ul class="treeview-menu">
+		{{#each rooms}}
+			{{> chatRoomItem }}
+		{{else}}
+			<p class="empty">{{_ "No_direct_messages_yet" }}</p>
+		{{/each}}
+    </ul>
 </template>

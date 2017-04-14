@@ -1,4 +1,5 @@
 <template name="combined">
+	<!--
 	<h3 class="add-room {{isActive}}">
 		{{_ "Channels"}} <span class="room-count-small">({{rooms.count}})</span>
 	</h3>
@@ -9,5 +10,18 @@
 			<p class="empty">{{_ "No_channels_yet" }}</p>
 		{{/each}}
 	</ul>
+	-->	
+    <a href="#">
+        <span class="pull-left-container {{isActive}}">
+            <i class="fa fa-angle-right"></i>{{_ "Channels"}}<em>({{rooms.count}})</em>
+        </span>
+    </a>
+    <ul class="treeview-menu">
+		{{#each rooms}}
+			{{> chatRoomItem }}
+		{{else}}
+			<p class="empty">{{_ "No_channels_yet" }}</p>
+		{{/each}}
+    </ul>
 	<button class="more more-channels background-transparent-darker-hover">{{_ "More_channels"}}...</button>
 </template>
