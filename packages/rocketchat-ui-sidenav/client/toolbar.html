@@ -1,28 +1,20 @@
 <template name="toolbar">
 	<div class="toolbar">
-		<!--
-		<div class="toolbar-wrapper">
-			<div class="toolbar-search">
-				<i class="toolbar-search__icon icon-search"></i>
-				<input type="text" name="toolbar-input" class="toolbar-search__input background-transparent-light color-content-background-color border-transparent-lighter" placeholder="{{getPlaceholder}}">
-				<i class="toolbar-search__icon toolbar-search__icon--cancel icon-cancel"></i>
-			</div>
-		</div>-->
         <!-- search form -->
         <div class="sidebar-form">
             <div class="input-group">
                 <input type="text" name="toolbar-input" class="form-control toolbar-search__input" placeholder="{{getPlaceholder}}">
                 <span class="input-group-btn">
-                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                    <button type="button" name="search" id="search-btn" class="btn btn-flat">
                         <i class="fa fa-search"></i>
-                    </button>
-                </span>
+                    </button>           
+					{{#if canCreate}}
+	                    <button type="button" name="roomadd" id="roomadd-btn" class="btn btn-flat">
+	                        <i class="fa fa-plus"></i>
+	                    </button>
+					{{/if}}
+                </span>     
             </div>
-			{{#if canCreate}}
-				<div class="toolbar-search__buttons">
-					<i class="toolbar-search__create-channel icon-plus"></i>
-				</div>
-			{{/if}}
         </div>
 
 		{{> messagePopup popupConfig}}
