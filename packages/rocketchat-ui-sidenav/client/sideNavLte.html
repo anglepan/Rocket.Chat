@@ -14,8 +14,8 @@
             <div class="tab-content">
                 <!-- message tab content -->
                 <div class="tab-pane rooms-list" id="sidebar-message-tab" aria-label="{{_ "Channels"}}" role="region">
-                    <div class="unread-rooms-mode {{#if hasUnread}}has-unread{{/if}}">
-                        <ul class="treeview-menu">
+                    <div class="unread-rooms-mode {{#if hasUnread}}has-unread{{/if}}">                    
+                        <ul class="sidebar-menu">
                             {{#each unreadRooms}}
                                 {{> chatRoomItem }}
                             {{/each}}
