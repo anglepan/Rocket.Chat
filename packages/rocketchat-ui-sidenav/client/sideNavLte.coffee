@@ -54,9 +54,6 @@ Template.sideNavLte.events
 	'mouseleave .header': ->
 		SideNav.leaveArrow()
 
-	#'scroll .rooms-list': ->
-	#	menu.updateUnreadBars()
-
 	'dropped .side-nav': (e) ->
 		e.preventDefault()
 
@@ -84,9 +81,6 @@ Template.sideNavLte.onRendered ->
 	      console.log $('.sidebar-header').height()
 	      console.log $('.user-panel').height()
 	      console.log $('.sidebar-form').height()
-  
-	Meteor.defer ->
-		menu.updateUnreadBars()
 
 Template.sideNavLte.onCreated ->
 	@autorun =>

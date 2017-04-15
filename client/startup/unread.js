@@ -44,7 +44,7 @@ Meteor.startup(function() {
 			}
 		}
 
-		menu.updateUnreadBars();
+		//menu.updateUnreadBars();
 
 		if (unreadCount > 0) {
 			if (unreadCount > 999) {
