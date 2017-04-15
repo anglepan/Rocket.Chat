@@ -519,7 +519,7 @@ a:focus {
   top: -3px;
   right: -10px;
   font-size: 10px;
-  font-weight: 400;
+  font-weight: 100;
 }
 .user-panel2 > .info {
   padding: 5px 5px 5px 0px;
@@ -825,10 +825,10 @@ a:focus {
 }
 .nav-tabs.control-sidebar-tabs > li > a .badge {
   position: absolute;
-  top: 5px;
+  top: 3px;
   right: 15px;
   font-size: 10px;
-  font-weight: 400;
+  font-weight: 100;
 }
 .nav-tabs.control-sidebar-tabs > li.active > a,
 .nav-tabs.control-sidebar-tabs > li.active > a:hover,
