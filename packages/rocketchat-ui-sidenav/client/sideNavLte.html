@@ -14,7 +14,7 @@
             <div class="tab-content">
                 <!-- message tab content -->
                 <div class="tab-pane rooms-list" id="sidebar-message-tab" aria-label="{{_ "Channels"}}" role="region">
-                    <div class="unread-rooms-mode {{#if hasUnread}}has-unread{{#/if}}">
+                    <div class="unread-rooms-mode {{#if hasUnread}}has-unread{{/if}}">
                         <ul class="treeview-menu">
                             {{#each unreadRooms}}
                                 {{> chatRoomItem }}
@@ -50,9 +50,9 @@
                 <!-- /.tab-pane -->
             </div>
             <ul class="nav nav-tabs nav-justified control-sidebar-tabs" style="position:absolute;bottom:0px;">
-                <li><a href="#sidebar-message-tab" data-toggle="tab"><i class="fa fa-commenting fa-2x"></i>{{#if hasUnread}}<span class="badge bg-red">({{unreadRooms.count}})</span>{{#/if}}</a></li>
-                <li class="active"><a href="#sidebar-friend-tab" data-toggle="tab"><i class="fa fa-user fa-2x"></i></a></li>
-                <li><a href="#sidebar-group-tab" data-toggle="tab"><i class="fa fa-users fa-2x"></i></a></li>
+                <li><a href="#sidebar-message-tab" data-toggle="tab"><i class="fa fa-commenting fa-lg"></i>{{#if hasUnread}}<span class="badge bg-red">({{unreadRooms.count}})</span>{{/if}}</a></li>
+                <li class="active"><a href="#sidebar-friend-tab" data-toggle="tab"><i class="fa fa-user fa-lg"></i></a></li>
+                <li><a href="#sidebar-group-tab" data-toggle="tab"><i class="fa fa-users fa-lg"></i></a></li>
             </ul>
         </section>
     {{/if}}
