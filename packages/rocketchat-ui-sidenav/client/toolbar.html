@@ -3,13 +3,13 @@
         <!-- search form -->
         <div class="sidebar-form">
             <div class="input-group">
-                <input type="text" name="toolbar-input" class="form-control toolbar-search__input" placeholder="{{getPlaceholder}}">
+                <input type="text" name="toolbar-input" class="form-control toolbar-search__input">
                 <span class="input-group-btn">
-                    <button type="button" name="search" id="search-btn" class="btn btn-default" aria-label="{{getPlaceholder}}">
+                    <button type="button" name="search" id="search-btn" class="btn btn-default" title="{{getPlaceholder}}" aria-label="{{getPlaceholder}}">
                         <i class="fa fa-search"></i>
                     </button>           
 					{{#if canCreate}}
-	                    <button type="button" name="roomadd" id="roomadd-btn" class="btn btn-default toolbar-search__create-channel" aria-label="{{_ "Create_new" }}{{_ "Channels"}}">
+	                    <button type="button" name="roomadd" id="roomadd-btn" class="btn btn-default toolbar-search__create-channel" title="{{_ "Create_new" }}{{_ "Channels"}}" aria-label="{{_ "Create_new" }}{{_ "Channels"}}">
 	                        <i class="fa fa-plus"></i>
 	                    </button>
 					{{/if}}

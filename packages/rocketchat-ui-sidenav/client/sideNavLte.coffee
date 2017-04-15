@@ -54,8 +54,8 @@ Template.sideNavLte.events
 	'mouseleave .header': ->
 		SideNav.leaveArrow()
 
-	'scroll .rooms-list': ->
-		menu.updateUnreadBars()
+	#'scroll .rooms-list': ->
+	#	menu.updateUnreadBars()
 
 	'dropped .side-nav': (e) ->
 		e.preventDefault()
