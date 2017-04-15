@@ -35,6 +35,12 @@ Template.sideNavLte.helpers
 		else
 			return @template
 
+	hasUnread: ->
+		return true if Meteor.user()?.settings?.preferences?.unreadRoomsMode and Template.instance().unreadRooms.count() > 0
+
+	unreadRooms: ->
+		return Template.instance().unreadRooms
+
 Template.sideNavLte.events
 	'click .close-flex': ->
 		SideNav.closeFlex()
@@ -81,3 +87,11 @@ Template.sideNavLte.onRendered ->
   
 	Meteor.defer ->
 		menu.updateUnreadBars()
+
+Template.sideNavLte.onCreated ->
+	@autorun =>
+	query =
+		alert: true
+		open: true
+
+	@unreadRooms = ChatSubscription.find query, { sort: 't': 1, 'name': 1 }
