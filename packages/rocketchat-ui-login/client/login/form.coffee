@@ -90,8 +90,21 @@ Template.loginForm.events
 						return
 
 					RocketChat.callbacks.run('userRegistered');
-
 					Meteor.loginWithPassword s.trim(formData.email), formData.pass, (error) ->
+						#set user default Preferences 
+						data = {}
+						data.unreadRoomsMode = true
+						Meteor.call 'saveUserPreferences', data, (er, results) ->
+							if results
+								#toastr.success t('Preferences_saved')
+								if reload
+									setTimeout ->
+										Meteor._reload.reload()
+									, 1000
+
+							if er
+								handleError(er)
+
 						if error?.error is 'error-invalid-email'
 							toastr.success t('We_have_sent_registration_email')
 							instance.state.set 'login'

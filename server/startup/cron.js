@@ -15,14 +15,16 @@ function generateStatistics() {
 	statistics.host = Meteor.absoluteUrl();
 
 	if (RocketChat.settings.get('Statistics_reporting')) {
+		/*
 		try {
 			HTTP.post('https://collector.rocket.chat/', {
 				data: statistics
 			});
 		} catch (error) {
-			/*error*/
+			//error
 			logger.warn('Failed to send usage report');
 		}
+		*/
 	}
 }
 
@@ -32,7 +34,7 @@ function cleanupOEmbedCache() {
 
 Meteor.startup(function() {
 	return Meteor.defer(function() {
-		generateStatistics();
+		//generateStatistics();
 
 		SyncedCron.add({
 			name: 'Generate and save statistics',
