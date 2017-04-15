@@ -93,7 +93,7 @@ Template.loginForm.events
 					Meteor.loginWithPassword s.trim(formData.email), formData.pass, (error) ->
 						#set user default Preferences 
 						data = {}
-						data.unreadRoomsMode = true
+						data.unreadRoomsMode = "1"
 						Meteor.call 'saveUserPreferences', data, (er, results) ->
 							if results
 								#toastr.success t('Preferences_saved')
