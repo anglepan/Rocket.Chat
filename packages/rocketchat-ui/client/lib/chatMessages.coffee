@@ -6,7 +6,7 @@ class @ChatMessages
 		this.editing = {}
 		this.records  = {}
 		this.messageMaxSize = RocketChat.settings.get('Message_MaxAllowedSize')
-		this.wrapper = $(node).find(".wrapper")
+		this.wrapper = $(node).find(".messages-box-wrapper")
 		this.input = $(node).find(".input-message").get(0)
 		this.$input = $(this.input)
 		this.hasValue = new ReactiveVar false

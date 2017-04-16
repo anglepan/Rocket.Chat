@@ -11,7 +11,7 @@
 		for child in mainNode.children
 			if child?
 				if child.classList.contains('room-container')
-					wrapper = child.querySelector('.messages-box > .wrapper')
+					wrapper = child.querySelector('.messages-box > .messages-box-wrapper')
 					if wrapper
 						if wrapper.scrollTop >= wrapper.scrollHeight - wrapper.clientHeight
 							child.oldScrollTop = 10e10

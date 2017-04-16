@@ -217,8 +217,8 @@ Tracker.autorun ->
 		ticksBar = $(dom).find('.ticks-bar')
 		$(dom).find('.ticks-bar > .tick').remove()
 
-		scrollTop = $(dom).find('.messages-box > .wrapper').scrollTop() - 50
-		totalHeight = $(dom).find('.messages-box > .wrapper > ul').height() + 40
+		scrollTop = $(dom).find('.messages-box > .messages-box-wrapper').scrollTop() - 50
+		totalHeight = $(dom).find('.messages-box > .messages-box-wrapper > ul').height() + 40
 
 		$('.messages-box .mention-link-me').each (index, item) ->
 			topOffset = $(item).offset().top + scrollTop

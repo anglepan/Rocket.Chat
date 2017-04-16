@@ -311,7 +311,7 @@ Template.room.events
 		instance.tabBar.setTemplate('membersList')
 		instance.tabBar.open()
 
-	'scroll .wrapper': _.throttle (e, instance) ->
+	'scroll .messages-box-wrapper': _.throttle (e, instance) ->
 		if RoomHistoryManager.isLoading(@_id) is false and (RoomHistoryManager.hasMore(@_id) is true or RoomHistoryManager.hasMoreNext(@_id) is true)
 			if RoomHistoryManager.hasMore(@_id) is true and e.target.scrollTop is 0
 				RoomHistoryManager.getMore(@_id)
@@ -542,8 +542,8 @@ Template.room.onRendered ->
 
 	# ScrollListener.init()
 
-	wrapper = this.find('.wrapper')
-	wrapperUl = this.find('.wrapper > ul')
+	wrapper = this.find('.messages-box-wrapper')
+	wrapperUl = this.find('.messages-box-wrapper > ul')
 	newMessage = this.find(".new-message")
 
 	template = this

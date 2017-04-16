@@ -47,7 +47,7 @@ currentTracker = undefined
 				roomDom = RoomManager.getDomOfRoom(type + name, room._id)
 				mainNode.appendChild roomDom
 				if roomDom.classList.contains('room-container')
-					roomDom.querySelector('.messages-box > .wrapper').scrollTop = roomDom.oldScrollTop
+					roomDom.querySelector('.messages-box > .messages-box-wrapper').scrollTop = roomDom.oldScrollTop
 
 			Session.set 'openedRoom', room._id
 

@@ -46,7 +46,7 @@
 			room.unreadNotLoaded.set result?.unreadNotLoaded
 			room.firstUnread.set result?.firstUnread
 
-			wrapper = $('.messages-box .wrapper').get(0)
+			wrapper = $('.messages-box .messages-box-wrapper').get(0)
 			if wrapper?
 				previousHeight = wrapper.scrollHeight
 
@@ -74,7 +74,7 @@
 		if room.hasMoreNext.curValue isnt true
 			return
 
-		instance = Blaze.getView($('.messages-box .wrapper')[0]).templateInstance()
+		instance = Blaze.getView($('.messages-box .messages-box-wrapper')[0]).templateInstance()
 		instance.atBottom = false
 
 		room.isLoading.set true
@@ -114,10 +114,10 @@
 		unless message?.rid
 			return
 
-		instance = Blaze.getView($('.messages-box .wrapper')[0]).templateInstance()
+		instance = Blaze.getView($('.messages-box .messages-box-wrapper')[0]).templateInstance()
 
 		if ChatMessage.findOne message._id
-			wrapper = $('.messages-box .wrapper')
+			wrapper = $('.messages-box .messages-box-wrapper')
 			msgElement = $("##{message._id}", wrapper)
 			pos = wrapper.scrollTop() + msgElement.offset().top - wrapper.height()/2
 			wrapper.animate({
@@ -156,7 +156,7 @@
 				Meteor.defer ->
 					readMessage.refreshUnreadMark(message.rid, true)
 					RoomManager.updateMentionsMarksOfRoom typeName
-					wrapper = $('.messages-box .wrapper')
+					wrapper = $('.messages-box .messages-box-wrapper')
 					msgElement = $("##{message._id}", wrapper)
 					pos = wrapper.scrollTop() + msgElement.offset().top - wrapper.height()/2
 					wrapper.animate({
