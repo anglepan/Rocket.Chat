@@ -144,7 +144,7 @@ Template.main.events
 			t.touchstartX = e.originalEvent.touches[0].clientX
 			t.touchstartY = e.originalEvent.touches[0].clientY
 			t.mainContent = $('.main-content')
-			t.wrapper = $('.messages-box > .wrapper')
+			t.wrapper = $('.messages-box > .messages-box-wrapper')
 
 	'touchmove': (e, t) ->
 		if t.touchstartX?
