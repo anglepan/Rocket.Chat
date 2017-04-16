@@ -1267,6 +1267,112 @@ label.required::after {
 					margin-bottom: 10px;
 				}
 			}
+
+			ul {
+				position: relative;
+				//left: 1px;
+
+				li {
+					white-space: nowrap;
+					max-width: 100%;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					vertical-align: middle;
+
+					.remove,
+					.erase {
+						position: absolute;
+						display: block;
+						right: -18px;
+						top: 2px;
+						opacity: 0;
+						.transform(translateX(-10px));
+						transition: opacity 0.15s ease 0.35s, transform 0.12s ease-out 0.35s;
+					}
+
+					&:hover {
+						.opt {
+							opacity: 1;
+							.transform(translateX(0));
+						}
+					}
+
+					&.has-unread {
+						.opt {
+							opacity: 0;
+						}
+					}
+
+					&.has-alert {
+						.name {
+							font-weight: bold;
+						}
+					}
+				}
+
+				a {
+					display: block;
+					border-radius: 2px 0 0 2px;
+					padding: 6px 25px 7px 6px;
+					font-size: 15px;
+					position: relative;
+					line-height: 16px;
+					white-space: nowrap;
+					max-width: 100%;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					vertical-align: middle;
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: none;
+					}
+
+					.archived {
+						font-style: italic;
+					}
+				}
+
+				.opt {
+					position: absolute;
+					right: 0;
+					width: 50px;
+					padding-right: 10px;
+					text-align: right;
+					opacity: 0;
+					display: block;
+					top: 7px;
+					transition: opacity 0.12s ease;
+
+					i {
+						margin: 0 1px;
+					}
+
+					.icon-cancel-circled::before {
+						margin-left: 2px;
+					}
+
+					.icon-logout {
+						margin-left: 1px;
+					}
+
+					&.fixed {
+						opacity: 1;
+						.transform(translateX(0));
+					}
+				}
+
+				i {
+					font-size: 14px;
+					width: 16px;
+					display: inline-block;
+				}
+
+				input[type="text"] {
+					width: 100%;
+					font-size: 12px;
+				}
+			}
 		}
 
 		h4 {
