@@ -22,8 +22,12 @@
                         </ul>
                     </div>
                 </div>
-                {{#unless hasUnread}}
-                    <img src="/images/nomoremsg.svg" alt="没有更多未读消息了" />
+                {{#if hasUnread}}
+                    <div style="text-align: center;">
+                        <img src="/images/nomoremsg.svg" style=" width: 80px;">
+                        <br />
+                        <p>没有更多的未读消息了</p>
+                    </div>
                 {{/unless}}
                 <!-- /.tab-pane -->
                 <!-- friend tab content -->
