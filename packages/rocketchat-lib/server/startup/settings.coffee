@@ -248,8 +248,8 @@ RocketChat.settings.addGroup 'Push', ->
 RocketChat.settings.addGroup 'Layout', ->
 
 	@section 'Content', ->
-		@add 'Layout_Home_Title', 'Home', { type: 'string', public: true }
-		@add 'Layout_Home_Body', 'Welcome to Rocket.Chat <br> Go to APP SETTINGS -> Layout to customize this intro.', { type: 'code', code: 'text/html', multiline: true, public: true }
+		@add 'Layout_Home_Title', '首页', { type: 'string', public: true }
+		@add 'Layout_Home_Body', '欢迎来到拓Q，期待你的反馈~~', { type: 'code', code: 'text/html', multiline: true, public: true }
 		@add 'Layout_Terms_of_Service', 'Terms of Service <br> Go to APP SETTINGS -> Layout to customize this page.', { type: 'code', code: 'text/html', multiline: true, public: true }
 		@add 'Layout_Login_Terms', 'By proceeding you are agreeing to our <a href="/terms-of-service">Terms of Service</a> and <a href="/privacy-policy">Privacy Policy</a>.', { type: 'string', multiline: true, public: true }
 		@add 'Layout_Privacy_Policy', 'Privacy Policy <br> Go to APP SETTINGS -> Layout to customize this page.', { type: 'code', code: 'text/html', multiline: true, public: true }

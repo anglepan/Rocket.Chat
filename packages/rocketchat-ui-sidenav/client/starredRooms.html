@@ -1,10 +1,22 @@
 <template name="starredRooms">
 	{{#if total}}
+		<!--
 		<h3 class="{{isActive}}"><i class="icon-star"></i>{{_ "Favorites"}} <span class="room-count-small">({{rooms.count}})</span></h3>
 		<ul>
 			{{#each rooms}}
 				{{> chatRoomItem }}
 			{{/each}}
 		</ul>
+		-->
+		<a href="">
+	        <span class="pull-left-container {{isActive}}">
+	            <i class="fa fa-angle-right"></i>{{_ "Favorites"}}<em>({{rooms.count}})</em>
+	        </span>
+	    </a>
+	    <ul class="treeview-menu">
+			{{#each rooms}}
+				{{> chatRoomItem }}
+			{{/each}}
+	    </ul>  
 	{{/if}}
 </template>
