@@ -21,14 +21,12 @@
                             {{/each}}
                         </ul>
                     </div>
-                </div>
-                {{#if hasUnread}}
-                    <div style="text-align: center;">
+                    <div style="text-align: center;" class="{{#if hasUnread}}hidden{{/if}}">
                         <img src="/images/nomoremsg.svg" style=" width: 80px;">
                         <br />
                         <p>没有更多的未读消息了</p>
-                    </div>
-                {{/unless}}
+                    </div>             
+                </div>
                 <!-- /.tab-pane -->
                 <!-- friend tab content -->
                 <div class="tab-pane rooms-list active" id="sidebar-friend-tab" aria-label="{{_ "Channels"}}" role="region">
@@ -50,9 +48,7 @@
                 <!-- /.tab-pane -->
                 <!-- group tab content -->
                 <div class="tab-pane" id="sidebar-group-tab">
-                    <h4>
-                        预留...
-                    </h4>
+                   
                 </div>
                 <!-- /.tab-pane -->
             </div>

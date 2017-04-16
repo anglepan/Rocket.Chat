@@ -36,9 +36,10 @@ Template.sideNavLte.helpers
 			return @template
 
 	hasUnread: ->
-		let unread = false
+		unread = false
 		if not Meteor.user()?.settings?.preferences?
-			unread = true
+			if Template.instance().unreadRooms.count() > 0
+				unread = true
 		else if Meteor.user()?.settings?.preferences?.unreadRoomsMode and Template.instance().unreadRooms.count() > 0
 			unread = true
 		return unread
