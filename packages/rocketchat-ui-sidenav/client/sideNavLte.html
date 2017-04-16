@@ -22,6 +22,9 @@
                         </ul>
                     </div>
                 </div>
+                {{#unless hasUnread}}
+                    <img src="/images/nomoremsg.svg" alt="没有更多未读消息了" />
+                {{/unless}}
                 <!-- /.tab-pane -->
                 <!-- friend tab content -->
                 <div class="tab-pane rooms-list active" id="sidebar-friend-tab" aria-label="{{_ "Channels"}}" role="region">
