@@ -2838,7 +2838,7 @@ table.text-center th {
   padding: 5px 10px;
   background: #d2d6de;
   border: 1px solid #d2d6de;
-  margin: 5px 40px 0 55px;
+  margin: 20px 40px 0px 10px;
   color: #444444;
   display: inline-block;
   vertical-align: top;
@@ -2867,7 +2867,7 @@ table.text-center th {
   margin-left: 0px;
   margin-right: 0px;
   float: right;
-  right: 55px;
+  right: 45px;
 }
 .right .direct-chat-text:after,
 .right .direct-chat-text:before {
@@ -2881,7 +2881,7 @@ table.text-center th {
 }
 .direct-chat-info {
   position: absolute;
-  left: 10px;
+  left: 20px;
   display: inline-block;
   vertical-align: top;
 }
