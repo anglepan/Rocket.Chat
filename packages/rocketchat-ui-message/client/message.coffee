@@ -19,6 +19,8 @@ Template.message.helpers
 		return renderEmoji emoji
 	own: ->
 		return 'own' if this.u?._id is Meteor.userId()
+	right: ->
+		return 'right' if this.u?._id is Meteor.userId()
 	timestamp: ->
 		return +this.ts
 	chatops: ->
