@@ -39,9 +39,6 @@ Package.onUse(function(api) {
 	api.addFiles('client/popup/messagePopupConfig.coffee', 'client');
 	api.addFiles('client/popup/messagePopupEmoji.coffee', 'client');
 
-	api.addFiles('client/messageLte.html', 'client');
-	api.addFiles('client/messageLte.coffee', 'client');
-
 	api.addFiles('client/renderMessageBody.js', 'client');
 
 	api.export('renderMessageBody');
