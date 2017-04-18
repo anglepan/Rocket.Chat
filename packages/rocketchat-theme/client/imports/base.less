@@ -193,27 +193,29 @@ blockquote {
 		&::before {
 			content: "";
 			display: block;
-			position: absolute;
-			right: 0;
-			left: 0;
-			top: 0;
-			transition: background-color, 0.5s, linear;
-			height: 16px;
+			//position: absolute;
+			//right: 0;
+			//left: 0;
+			//top: 0;
+			//transition: background-color, 0.5s, linear;
+			//height: 16px;
 		}
 
 		&::after {
 			content: attr(data-unread-text);
 			display: block;
 			position: absolute;
-			right: 0;
+			left: 0;
 			top: 0;
 			text-transform: uppercase;
 			font-size: 12px;
-			line-height: 16px;
-			padding: 0 5px;
-			transition: color, 0.5s, linear;
-			left: 0;
+			font-weight: 300;
+			//line-height: 16px;
 			text-align: center;
+			.calc(left, ~"50% - 70px");
+			padding: 0 10px;
+			transition: color, 0.5s, linear;
+			border-radius: 5px;
 		}
 	}
 }
@@ -2855,7 +2857,7 @@ label.required::after {
 	}
 
 	&.new-day {
-		margin-top: 60px;
+		margin-top: 30px;
 
 		&::before {
 			content: attr(data-date);
@@ -3056,6 +3058,10 @@ label.required::after {
 
 		.body {
 			margin-top: 0;
+
+			.direct-chat-text {
+				margin-top: 0;
+			}
 		}
 
 		&:hover {

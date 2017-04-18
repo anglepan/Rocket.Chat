@@ -474,11 +474,14 @@ a:hover {
 .first-unread {
 	.body {
 		&::before {
-			background: @transparent-darker;
+			//background: @transparent-darker;
 		}
 
 		&::after {
-			color: @primary-font-color;
+			//color: @primary-font-color;
+			background: #d2d6de;
+		    border: 1px solid #d2d6de;
+		    color: #ffffff;
 		}
 	}
 }
@@ -486,7 +489,7 @@ a:hover {
 .first-unread-opaque {
 	.body {
 		&::before {
-			background: @transparent-dark;
+			//background: @transparent-dark;
 		}
 	}
 }
