@@ -22,8 +22,7 @@ Template.message.helpers
 	right: ->
 		return 'right' if this.u?._id is Meteor.userId()
 	directChatBodyType: ->
-		if attachments.count > 0
-			return 'direct-chat-file'
+		return 'direct-chat-file' if attachments.count > 0			
 		return 'direct-chat-text'
 
 	timestamp: ->
