@@ -2807,8 +2807,6 @@ table.text-center th {
   -o-transform: translate(0, 0);
   transform: translate(0, 0);
   padding: 10px;
-  height: 250px;
-  overflow: auto;
 }
 .direct-chat-msg {
   display: block;
@@ -2837,7 +2835,8 @@ table.text-center th {
   -o-transition: -o-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
 }
-.direct-chat-text {
+.direct-chat-text,
+.direct-chat-file {
   border-radius: 5px;
   position: relative;
   padding: 5px 10px;
@@ -2849,7 +2848,9 @@ table.text-center th {
   vertical-align: top;
 }
 .direct-chat-text:after,
-.direct-chat-text:before {
+.direct-chat-file:after,
+.direct-chat-text:before,
+.direct-chat-file:before {
   position: absolute;
   right: 100%;
   top: 15px;
@@ -2860,27 +2861,33 @@ table.text-center th {
   width: 0;
   pointer-events: none;
 }
-.direct-chat-text:after {
+.direct-chat-text:after,
+.direct-chat-file:after {
   border-width: 5px;
   margin-top: -5px;
 }
-.direct-chat-text:before {
+.direct-chat-text:before,
+.direct-chat-file:before {
   border-width: 6px;
   margin-top: -6px;
 }
-.right .direct-chat-text {
+.right .direct-chat-text,
+.right .direct-chat-file {
   margin-left: 80px;
   margin-right: 0px;
   right: 15px;
 }
 .right .direct-chat-text:after,
-.right .direct-chat-text:before {
+.right .direct-chat-file:after,
+.right .direct-chat-text:before,
+.right .direct-chat-file:before {
   right: auto;
   left: 100%;
   border-right-color: transparent;
   border-left-color: #d2d6de;
 }
-.group .direct-chat-text {
+.group .direct-chat-text,
+.group .direct-chat-file {
   margin-top: 20px;
 }
 .direct-chat-info {

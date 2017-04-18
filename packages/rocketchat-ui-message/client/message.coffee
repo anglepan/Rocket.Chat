@@ -20,9 +20,12 @@ Template.message.helpers
 	own: ->
 		return 'own' if this.u?._id is Meteor.userId()
 	right: ->
-		if attachments.count > 0
-			return ''
 		return 'right' if this.u?._id is Meteor.userId()
+	directChatBodyType: ->
+		if attachments.count > 0
+			return 'direct-chat-file'
+		return 'direct-chat-text'
+
 	timestamp: ->
 		return +this.ts
 	chatops: ->
