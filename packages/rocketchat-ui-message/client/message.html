@@ -56,16 +56,18 @@
 				</span>
 			</div>
 		</div>
-		<div class="body direct-chat-text color-primary-font-color {{system true}}" dir="auto" data-unread-text="{{_ "Unread_Messages"}}">
-			{{{body}}}
-			{{#if hasOembed}}
-				{{#each urls}}
-					{{injectIndex . @index}} {{> oembedBaseWidget}}
-				{{/each}}
-			{{/if}}
-			{{#each attachments}}
-				{{injectIndex . @index}} {{> messageAttachment}}
-			{{/each}}
+		<div class="body color-primary-font-color {{system true}}" dir="auto" data-unread-text="{{_ "Unread_Messages"}}">
+			<div class="direct-chat-text">
+				{{{body}}}
+				{{#if hasOembed}}
+					{{#each urls}}
+						{{injectIndex . @index}} {{> oembedBaseWidget}}
+					{{/each}}
+				{{/if}}
+				{{#each attachments}}
+					{{injectIndex . @index}} {{> messageAttachment}}
+				{{/each}}			
+			</div>
 		</div>
 		<ul class="actionLinks {{hideActionLinks}}">
 			{{#each actionLink in actionLinks}}
