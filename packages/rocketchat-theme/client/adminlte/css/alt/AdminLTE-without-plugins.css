@@ -2975,63 +2975,63 @@ table.text-center th {
   color: #999;
 }
 .direct-chat-danger .right > .direct-chat-text,
-.direct-chat-danger .body > .direct-chat-text {
+.direct-chat-danger .right > .body > .direct-chat-text {
   background: #dd4b39;
   border-color: #dd4b39;
   color: #ffffff;
 }
 .direct-chat-danger .right > .direct-chat-text:after,
-.direct-chat-danger .body > .direct-chat-text:after,
+.direct-chat-danger .right > .body > .direct-chat-text:after,
 .direct-chat-danger .right > .direct-chat-text:before,
-.direct-chat-danger .body > .direct-chat-text:before {
+.direct-chat-danger .right > .body > .direct-chat-text:before {
   border-left-color: #dd4b39;
 }
 .direct-chat-primary .right > .direct-chat-text,
-.direct-chat-primary .body > .direct-chat-text {
+.direct-chat-primary .right > .body > .direct-chat-text {
   background: #3c8dbc;
   border-color: #3c8dbc;
   color: #ffffff;
 }
 .direct-chat-primary .right > .direct-chat-text:after,
-.direct-chat-primary .body > .direct-chat-text:after,
+.direct-chat-primary .right > .body > .direct-chat-text:after,
 .direct-chat-primary .right > .direct-chat-text:before,
-.direct-chat-primary .body > .direct-chat-text:before {
+.direct-chat-primary .right > .body > .direct-chat-text:before {
   border-left-color: #3c8dbc;
 }
 .direct-chat-warning .right > .direct-chat-text,
-.direct-chat-warning .body > .direct-chat-text {
+.direct-chat-warning .right > .body > .direct-chat-text {
   background: #f39c12;
   border-color: #f39c12;
   color: #ffffff;
 }
 .direct-chat-warning .right > .direct-chat-text:after,
-.direct-chat-warning .body > .direct-chat-text:after,
+.direct-chat-warning .right > .body > .direct-chat-text:after,
 .direct-chat-warning .right > .direct-chat-text:before,
-.direct-chat-warning .body > .direct-chat-text:before {
+.direct-chat-warning .right > .body > .direct-chat-text:before {
   border-left-color: #f39c12;
 }
 .direct-chat-info .right > .direct-chat-text,
-.direct-chat-info .body > .direct-chat-text {
+.direct-chat-info .right > .body > .direct-chat-text {
   background: #00c0ef;
   border-color: #00c0ef;
   color: #ffffff;
 }
 .direct-chat-info .right > .direct-chat-text:after,
-.direct-chat-info .body > .direct-chat-text:after,
+.direct-chat-info .right > .body > .direct-chat-text:after,
 .direct-chat-info .right > .direct-chat-text:before,
-.direct-chat-info .body > .direct-chat-text:before {
+.direct-chat-info .right > .body > .direct-chat-text:before {
   border-left-color: #00c0ef;
 }
 .direct-chat-success .right > .direct-chat-text,
-.direct-chat-success .body > .direct-chat-text {
+.direct-chat-success .right > .body > .direct-chat-text {
   background: #00a65a;
   border-color: #00a65a;
   color: #ffffff;
 }
 .direct-chat-success .right > .direct-chat-text:after,
-.direct-chat-success .body > .direct-chat-text:after,
+.direct-chat-success .right > .body > .direct-chat-text:after,
 .direct-chat-success .right > .direct-chat-text:before,
-.direct-chat-success .body > .direct-chat-text:before {
+.direct-chat-success .right > .body > .direct-chat-text:before {
   border-left-color: #00a65a;
 }
 /*
