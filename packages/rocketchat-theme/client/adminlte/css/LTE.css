@@ -2822,6 +2822,11 @@ table.text-center th {
 .direct-chat-msg:after {
   clear: both;
 }
+.right {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 60px;
+}
 /*.direct-chat-text {
     display: inline-block;
 }*/
@@ -2866,8 +2871,6 @@ table.text-center th {
 .right .direct-chat-text {
   margin-left: 0px;
   margin-right: 0px;
-  float: right;
-  right: 55px;
 }
 .right .direct-chat-text:after,
 .right .direct-chat-text:before {
@@ -2906,7 +2909,7 @@ table.text-center th {
 }
 .right .direct-chat-name {
   left: auto;
-  right: 56px;
+  right: 50px;
   text-align: right;
 }
 .direct-chat-timestamp {
