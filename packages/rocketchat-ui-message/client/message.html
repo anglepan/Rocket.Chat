@@ -3,7 +3,7 @@
 		<div class="direct-chat-info clearfix">
 			{{#if avatar}}
 				{{#if avatarFromUsername}}
-					<button class="thumb user-card-message" data-username="{{u.username}}" tabindex="1">{{> avatar username=avatarFromUsername}}</button>
+					<button class="thumb user-card-message" data-username="{{u.username}}" tabindex="1">{{> avatarLte username=avatarFromUsername}}</button>
 				{{else}}
 					<button class="thumb user-card-message" data-username="{{u.username}}" tabindex="1">
 						<div class="avatar">
@@ -19,7 +19,7 @@
 						</div>
 					</button>
 				{{else}}
-					<button class="thumb user-card-message" data-username="{{u.username}}" tabindex="1">{{> avatar username=u.username}}</button>
+					<button class="thumb user-card-message" data-username="{{u.username}}" tabindex="1">{{> avatarLte username=u.username}}</button>
 				{{/if}}
 			{{/if}}
 			<div class="direct-chat-name">
