@@ -2839,7 +2839,7 @@ table.text-center th {
   border-radius: 5px;
   position: relative;
   background: #d2d6de;
-  margin: 20px 40px 0px 5px;
+  margin: 20px 40px 0px 0px;
   color: #444444;
   display: inline-block;
   vertical-align: top;
@@ -2872,7 +2872,7 @@ table.text-center th {
 .right .direct-chat-file {
   margin-left: 80px;
   margin-right: 0px;
-  right: 15px;
+  right: 10px;
 }
 .right .direct-chat-text:after,
 .right .direct-chat-file:after,
@@ -2889,13 +2889,13 @@ table.text-center th {
 }
 .direct-chat-info {
   position: absolute;
-  left: 20px;
+  left: 10px;
   display: inline-block;
   vertical-align: top;
 }
 .right .direct-chat-info {
   left: auto;
-  right: 20px;
+  right: 10px;
 }
 .direct-chat-img {
   border-radius: 50%;
