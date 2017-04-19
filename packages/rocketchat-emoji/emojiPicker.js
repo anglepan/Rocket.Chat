@@ -189,7 +189,7 @@ Template.emojiPicker.events({
 		event.stopPropagation();
 		event.preventDefault();
 
-		instance.$('.tone-selector').toggleClass('show');
+		instance.$('.tone-selector').toggleClass('emoji-show');
 	},
 	'click .tone-selector .tone'(event, instance) {
 		event.stopPropagation();
@@ -220,7 +220,7 @@ Template.emojiPicker.events({
 
 		instance.setCurrentTone(tone);
 
-		$('.tone-selector').toggleClass('show');
+		$('.tone-selector').toggleClass('emoji-show');
 	},
 	'click .emoji-list li'(event, instance) {
 		event.stopPropagation();

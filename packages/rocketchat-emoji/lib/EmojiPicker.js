@@ -86,7 +86,7 @@ RocketChat.EmojiPicker = {
 		this.source = source;
 
 		const containerEl = this.setPosition();
-		containerEl.addClass('show');
+		containerEl.addClass('emoji-show');
 
 		const emojiInput = containerEl.find('.emoji-filter input.search');
 		if (emojiInput) {
@@ -95,7 +95,7 @@ RocketChat.EmojiPicker = {
 		this.opened = true;
 	},
 	close() {
-		$('.emoji-picker').removeClass('show');
+		$('.emoji-picker').removeClass('emoji-show');
 		this.opened = false;
 	},
 	pickEmoji(emoji) {
