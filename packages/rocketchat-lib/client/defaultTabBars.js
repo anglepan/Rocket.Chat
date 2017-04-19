@@ -1,19 +1,10 @@
 RocketChat.TabBar.addButton({
-	groups: ['channel', 'group', 'direct'],
-	id: 'message-search',
-	i18nTitle: 'Search',
-	icon: 'icon-search',
-	template: 'messageSearch',
-	order: 1
-});
-
-RocketChat.TabBar.addButton({
 	groups: ['direct'],
 	id: 'user-info',
 	i18nTitle: 'User_Info',
 	icon: 'icon-user',
 	template: 'membersList',
-	order: 2
+	order: 1
 });
 
 RocketChat.TabBar.addButton({
@@ -22,6 +13,15 @@ RocketChat.TabBar.addButton({
 	i18nTitle: 'Members_List',
 	icon: 'icon-users',
 	template: 'membersList',
+	order: 1
+});
+
+RocketChat.TabBar.addButton({
+	groups: ['channel', 'group', 'direct'],
+	id: 'message-search',
+	i18nTitle: 'Search',
+	icon: 'icon-search',
+	template: 'messageSearch',
 	order: 2
 });
 
