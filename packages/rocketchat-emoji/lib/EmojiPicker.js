@@ -84,6 +84,7 @@ RocketChat.EmojiPicker = {
 		}
 		this.pickCallback = callback;
 		this.source = source;
+		console.log(source);
 
 		const containerEl = this.setPosition();
 		containerEl.addClass('emoji-show');
