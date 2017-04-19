@@ -1,6 +1,6 @@
 /* globals Template */
 Template.messageBox.events({
-	'click .emoji-picker-icon'(event) {
+	'click .emoji-picker-icon'(event, instance) {
 		event.stopPropagation();
 		if (RocketChat.EmojiPicker.isOpened()) {
 			RocketChat.EmojiPicker.close();
@@ -19,6 +19,8 @@ Template.messageBox.events({
 
 				input.prop('selectionStart', caretPos + emojiValue.length);
 				input.prop('selectionEnd', caretPos + emojiValue.length);
+
+				instance.isMessageFieldEmpty.set(false)
 			});
 		}
 	}
