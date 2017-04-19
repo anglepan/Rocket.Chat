@@ -54,7 +54,7 @@ RocketChat.EmojiPicker = {
 	setPosition() {
 		const sourcePos = $(this.source).offset();
 		const left = sourcePos.left;
-		const top = (sourcePos.top - this.height - 5);
+		const top = (sourcePos.top - this.height - 5 -30);
 		const cssProperties = {
 			top: top,
 			left: left
@@ -84,7 +84,6 @@ RocketChat.EmojiPicker = {
 		}
 		this.pickCallback = callback;
 		this.source = source;
-		console.log(source);
 
 		const containerEl = this.setPosition();
 		containerEl.addClass('emoji-show');
