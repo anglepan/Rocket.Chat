@@ -5,4 +5,4 @@ Meteor.startup ->
 		i18nTitle: 'Room_Info'
 		icon: 'icon-info-circled'
 		template: 'channelSettings'
-		order: 10
+		order: 100
