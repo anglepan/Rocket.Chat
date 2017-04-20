@@ -1,11 +1,12 @@
 <template name="livechat">
 	<div class="livechat-section {{livechatAvailable}}">
+		<!--
 		<h3 class="{{isActive}}">
 			{{#with available}}
 				<i class="livechat-status {{status}} {{icon}}" title="{{hint}}"></i>
 			{{/with}}
 			{{_ "Livechat"}}
-		</h3>
+		</h3>-->
 
 		{{#if guestPool}}
 			{{#if isLivechatAvailable}}
@@ -25,7 +26,7 @@
 				{{_ "Open_Livechats"}}
 			</h3>
 		{{/if}}
-
+		<!--
 		<ul>
 			{{#if showQueueLink}}
 				<li class="{{activeLivechatQueue}}">
@@ -40,6 +41,19 @@
 			{{else}}
 				<li class="empty">{{_ "No_livechats" }}</li>
 			{{/each}}
-		</ul>
+		</ul>-->
+		<a>
+	        <span class="pull-left-container {{isActive}}">
+	            <i class="fa fa-angle-right"></i>{{_ "Livechat"}}<em>({{rooms.count}})</em>
+	            {{#with available}}
+					<i class="livechat-status {{status}} {{icon}}" title="{{hint}}"></i>
+				{{/with}}
+	        </span>
+	    </a>
+	    <ul class="treeview-menu">
+			{{#each rooms}}
+				{{> chatRoomItem }}
+			{{/each}}
+	    </ul>
 	</div>
 </template>
