@@ -15,6 +15,7 @@ Template.accountBoxLte.helpers
 			visualStatus: visualStatus
 			_id: Meteor.userId()
 			username: username
+			realname: Meteor.user().name
 		}
 
 	showAdminOption: ->
