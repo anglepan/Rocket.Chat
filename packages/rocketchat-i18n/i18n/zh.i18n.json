@@ -924,7 +924,7 @@
   "My_Account": "我的账户",
   "n_messages": "%s 条消息",
   "N_new_messages": "%s 条新消息",
-  "Name": "姓名",
+  "Name": "用户名（用于登录）",
   "Name_cant_be_empty": "名字不可以为空",
   "Name_of_agent": "客服的名称",
   "Name_optional": "姓名（可选）",

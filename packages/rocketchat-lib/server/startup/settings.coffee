@@ -107,7 +107,7 @@ RocketChat.settings.addGroup 'General', ->
 	@add 'Restart', 'restart_server', { type: 'action', actionText: 'Restart_the_server' }
 
 	@section 'UTF8', ->
-		@add 'UTF8_Names_Validation', '[0-9a-zA-Z-_.]+', { type: 'string', public: true, i18nDescription: 'UTF8_Names_Validation_Description'}
+		@add 'UTF8_Names_Validation', '[0-9a-zA-Z\u4E00-\u9FA5-_.]+', { type: 'string', public: true, i18nDescription: 'UTF8_Names_Validation_Description'}
 		@add 'UTF8_Names_Slugify', true, { type: 'boolean', public: true }
 
 	@section 'Reporting', ->
