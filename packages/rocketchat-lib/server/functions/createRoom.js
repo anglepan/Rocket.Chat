@@ -14,11 +14,13 @@ RocketChat.createRoom = function(type, name, owner, members, readOnly, extraData
 	}
 
 	let nameValidation;
+	nameValidation = new RegExp('^[0-9a-zA-Z\u4E00-\u9FA5-_.]+$');
+	/*
 	try {
 		nameValidation = new RegExp(`^${ RocketChat.settings.get('UTF8_Names_Validation') }$`);
 	} catch (error) {
 		nameValidation = new RegExp('^[0-9a-zA-Z-_.]+$');
-	}
+	}*/
 
 	if (!nameValidation.test(name)) {
 		throw new Meteor.Error('error-invalid-name', 'Invalid name', { function: 'RocketChat.createRoom' });

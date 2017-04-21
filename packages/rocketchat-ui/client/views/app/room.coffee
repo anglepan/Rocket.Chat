@@ -86,8 +86,9 @@ Template.room.helpers
 		return RocketChat.roomTypes.getRoomName roomData.t, roomData
 
 	secondaryName: ->
-		roomData = Session.get('roomData' + this._id)
-		return '' unless roomData
+		#roomData = Session.get('roomData' + this._id)
+		#return '' unless roomData
+		return false
 
 		return RocketChat.roomTypes.getSecondaryRoomName roomData.t, roomData
 
@@ -105,9 +106,10 @@ Template.room.helpers
 		return roomData.announcement isnt undefined and roomData.announcement isnt ''
 
 	roomAnnouncement: ->
-		roomData = Session.get('roomData' + this._id)
-		return '' unless roomData
-		return roomData.announcement
+		#roomData = Session.get('roomData' + this._id)
+		#return '' unless roomData
+		#return roomData.announcement
+		return false
 
 	roomIcon: ->
 		roomData = Session.get('roomData' + this._id)
