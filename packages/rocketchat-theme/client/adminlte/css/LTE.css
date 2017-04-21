@@ -2891,6 +2891,7 @@ table.text-center th {
 .direct-chat-info {
   position: absolute;
   left: 10px;
+  margin-top: 5px;
   display: inline-block;
   vertical-align: top;
 }
