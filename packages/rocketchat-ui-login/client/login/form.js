@@ -103,24 +103,6 @@ Template.loginForm.events({
 					}
 					RocketChat.callbacks.run('userRegistered');
 					return Meteor.loginWithPassword(s.trim(formData.email), formData.pass, function(error) {
-						//set user default Preferences 
-						let data = {};
-						data.unreadRoomsMode = "1";
-						Meteor.call('saveUserPreferences', data, function(er, results) {
-							if (results){
-								//toastr.success(t('Preferences_saved'));
-								//if (reload){
-								//	setTimeout(function(){
-								//		Meteor._reload.reload();
-								//	}, 1000);																	
-								//}
-							}
-
-							if (er){
-								handleError(er);					
-							}
-						});
-
 						if (error && error.error === 'error-invalid-email') {
 							toastr.success(t('We_have_sent_registration_email'));
 							return instance.state.set('login');
