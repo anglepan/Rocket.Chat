@@ -981,7 +981,7 @@ RocketChat.settings.addGroup('Layout', function() {
 			type: 'boolean',
 			'public': true
 		});
-		this.add('UI_Use_Real_Name', false, {
+		this.add('UI_Use_Real_Name', true, {
 			type: 'boolean',
 			'public': true
 		});

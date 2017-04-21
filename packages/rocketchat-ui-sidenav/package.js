@@ -30,7 +30,7 @@ Package.onUse(function(api) {
 	api.addFiles('client/listPrivateGroupsFlex.html', 'client');
 	api.addFiles('client/privateGroups.html', 'client');
 	api.addFiles('client/privateGroupsFlex.html', 'client');
-	api.addFiles('client/sideNav.html', 'client');
+	//api.addFiles('client/sideNav.html', 'client');
 	api.addFiles('client/starredRooms.html', 'client');
 	api.addFiles('client/toolbar.html', 'client');
 	api.addFiles('client/unreadRooms.html', 'client');
@@ -47,7 +47,7 @@ Package.onUse(function(api) {
 	api.addFiles('client/listPrivateGroupsFlex.js', 'client');
 	api.addFiles('client/privateGroups.js', 'client');
 	api.addFiles('client/privateGroupsFlex.js', 'client');
-	api.addFiles('client/sideNav.js', 'client');
+	//api.addFiles('client/sideNav.js', 'client');
 	api.addFiles('client/starredRooms.js', 'client');
 	api.addFiles('client/toolbar.js', 'client');
 	api.addFiles('client/unreadRooms.js', 'client');

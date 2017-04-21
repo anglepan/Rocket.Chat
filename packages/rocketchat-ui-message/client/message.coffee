@@ -26,7 +26,8 @@ Template.message.helpers
 			return this.u.name
 		return this.u?.username
 	showUsername: ->
-		return this.alias or (RocketChat.settings.get('UI_Use_Real_Name') and this.u?.name)
+		return false
+		#return this.alias or (RocketChat.settings.get('UI_Use_Real_Name') and this.u?.name)
 	own: ->
 		return 'own' if this.u?._id is Meteor.userId()
 	right: ->

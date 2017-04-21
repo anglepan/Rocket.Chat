@@ -1,13 +1,14 @@
 <template name="accountBox">
-	<div class="account-box" aria-label="{{_ "Account"}}" role="region">
+	<div class="header account-box" aria-label="{{_ "Account"}}" role="region">
 		{{#with myUserInfo}}
-			<div class="info status-{{status}} primary-background-color">
+			<div class="info status-{{status}}">
 				{{#if username}}
 					<div class="thumb" data-status='{{visualStatus}}'>
-						{{> avatar username=username}}
+						{{> avatarLte username=username}}
 					</div>
 					<div class="data">
 						<h4 data-username="{{username}}">{{fname}}</h4>
+			            <p>梦想一定会~~</p>
 					</div>
 				{{/if}}
 			</div>
@@ -19,7 +20,7 @@
 					<button data-status="offline" class="status offline"><span>{{_ "Invisible"}}</span></button>
 					<button id="account" class='account-link'><i class="icon-sliders"></i><span>{{_ "My_Account"}}</span></button>
 					{{#each registeredMenus}}
-						<button class="account-box-item"><i class="{{icon}}"></i><span>{{name}}</span></button>
+						<button class="account-box-item"><i class="{{icon}}"></i><span>{{_ name}}</span></button>
 					{{/each}}
 					{{#if showAdminOption }}
 						<button id="admin" class='account-link'><i class="icon-wrench"></i><span>{{_ "Administration"}}</span></button>

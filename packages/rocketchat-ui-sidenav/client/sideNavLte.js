@@ -1,6 +1,6 @@
  /* globals menu*/
 
-Template.sideNav.helpers({
+Template.sideNavLte.helpers({
 	flexTemplate() {
 		return SideNav.getFlex().template;
 	},
@@ -50,20 +50,13 @@ Template.sideNav.helpers({
 		} else {
 			return this.template;
 		}
-	}
+	},
 
 	hasUnread() {
-		let unread = false		
-		if (! Meteor.user() && Meteor.user().settings && Meteor.user().settings.preferences && Meteor.user().settings.preferences.unreadRoomsMode）{
-			if(Template.instance().unreadRooms.count() > 0){
-				unread = true;
-			}
-		}
-		
-		if ((Meteor.user() && Meteor.user().settings && Meteor.user().settings.preferences && Meteor.user().settings.preferences.unreadRoomsMode) && (Template.instance().unreadRooms.count() > 0)) {
+		let unread = false;		
+		if(Template.instance().unreadRooms.count() > 0){
 			unread = true;
 		}
-
 		return unread;		
 	},
 
@@ -72,7 +65,7 @@ Template.sideNav.helpers({
 	}
 });
 
-Template.sideNav.events({
+Template.sideNavLte.events({
 	'click .close-flex'() {
 		return SideNav.closeFlex();
 	},
@@ -98,7 +91,7 @@ Template.sideNav.events({
 	}
 });
 
-Template.sideNav.onRendered(function() {
+Template.sideNavLte.onRendered(function() {
 	SideNav.init();
 	menu.init();
 	

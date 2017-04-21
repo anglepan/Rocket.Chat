@@ -103,17 +103,17 @@ Template.loginForm.events({
 					}
 					RocketChat.callbacks.run('userRegistered');
 					return Meteor.loginWithPassword(s.trim(formData.email), formData.pass, function(error) {
-						#set user default Preferences 
+						//set user default Preferences 
 						let data = {};
 						data.unreadRoomsMode = "1";
 						Meteor.call('saveUserPreferences', data, function(er, results) {
 							if (results){
-								#toastr.success(t('Preferences_saved'));
-								if (reload){
-									setTimeout(function{
-										Meteor._reload.reload();
-									}, 1000);																	
-								}
+								//toastr.success(t('Preferences_saved'));
+								//if (reload){
+								//	setTimeout(function(){
+								//		Meteor._reload.reload();
+								//	}, 1000);																	
+								//}
 							}
 
 							if (er){
