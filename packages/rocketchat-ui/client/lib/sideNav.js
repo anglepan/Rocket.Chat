@@ -146,7 +146,8 @@ this.SideNav = new class {
 		AccountBox.close();
 		this.toggleArrow(0);
 		this.toggleFlex(1, callback);
-		return this.focusInput();
+		//return this.focusInput();
+		//angle 20170422
 	}
 
 	init() {

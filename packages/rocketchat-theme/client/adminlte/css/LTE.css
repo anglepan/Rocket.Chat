@@ -2840,7 +2840,7 @@ table.text-center th {
   position: relative;
   text-align: left;
   background: #d2d6de;
-  margin: 25px 40px 0px 0px;
+  margin: 25px 35px 0px 5px;
   color: #444444;
   display: inline-block;
   vertical-align: top;
@@ -2871,9 +2871,9 @@ table.text-center th {
 }
 .right .direct-chat-text,
 .right .direct-chat-file {
-  margin-left: 80px;
+  margin-left: 50px;
   margin-right: 0px;
-  right: 10px;
+  right: 5px;
 }
 .right .direct-chat-text:after,
 .right .direct-chat-file:after,

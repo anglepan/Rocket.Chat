@@ -926,7 +926,7 @@ RocketChat.settings.addGroup('Layout', function() {
 			type: 'string',
 			'public': true
 		});
-		this.add('Layout_Home_Body', '欢迎来到拓Q，期待你的反馈~~<br> Go to APP SETTINGS -> Layout to customize this intro.', {
+		this.add('Layout_Home_Body', '欢迎来到拓Q，期待你的反馈~~', {
 			type: 'code',
 			code: 'text/html',
 			multiline: true,
