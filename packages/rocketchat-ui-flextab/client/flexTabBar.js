@@ -48,3 +48,9 @@ Template.flexTabBar.events({
 Template.flexTabBar.onCreated(function() {
 	this.tabBar = Template.currentData().tabBar;
 });
+
+Template.flexTabBar.onRendered({
+	if (Meteor.Device.isDesktop()) {
+		instance.tabBar.open(this);
+	}
+});

@@ -90,7 +90,7 @@ RocketChat.EmojiPicker = {
 
 		const emojiInput = containerEl.find('.emoji-filter input.search');
 		if (emojiInput) {
-			emojiInput.focus();
+			//emojiInput.focus();
 		}
 		this.opened = true;
 	},

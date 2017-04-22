@@ -57,7 +57,9 @@ RocketChatTabBar = class RocketChatTabBar {
 		}
 
 		Tracker.afterFlush(() => {
-			$('.flex-tab').find('input[type=text]:first').focus();
+			if (Meteor.Device.isDesktop()) {
+				$('.flex-tab').find('input[type=text]:first').focus();
+			}
 			$('.flex-tab .content').scrollTop(0);
 		});
 	}

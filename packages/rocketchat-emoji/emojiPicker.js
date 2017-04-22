@@ -181,7 +181,7 @@ Template.emojiPicker.events({
 		event.preventDefault();
 
 		instance.$('.emoji-filter .search').val('').change();
-		instance.$('.emoji-filter .search').focus();
+		//instance.$('.emoji-filter .search').focus();
 
 		instance.currentCategory.set(event.currentTarget.hash.substr(1));
 

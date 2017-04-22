@@ -11,6 +11,7 @@ Meteor.startup(() => {
 const toolbarSearch = {
 	shortcut: false,
 	clear() {
+		/*
 		const $inputMessage = $('textarea.input-message');
 
 		if (0 === $inputMessage.length) {
@@ -18,6 +19,7 @@ const toolbarSearch = {
 		}
 
 		$inputMessage.focus();
+		*/
 		$('.toolbar-search__input').val('');
 
 		if (this.shortcut) {
