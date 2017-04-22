@@ -1,11 +1,9 @@
 <template name="flexTabBar">
 <div class="flex-tab-container border-component-color {{opened}}">
-		<div class="alert alert-info alert-dismissible">
-			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-			<h4><i class="icon fa fa-info"></i>提示</h4>
-			再次点击右边tab按钮关闭页面。
-		</div>
 		<section class="flex-tab border-component-color">
+			<div class="tabheader">
+				<button type="button" class="btn" aria-hidden="true">&times;</button>
+			</div>
 			{{> Template.dynamic template=template data=flexData}}			
 		</section>
 		<div class="flex-tab-bar content-background-color" role="toolbar">
